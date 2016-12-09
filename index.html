@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <title>Train Scheduler</title>
+</head>
+<div class="container">
+  <!-- HEADER -->
+  <div class="row">
+    <div class="col-sm-12 jumbotron text-center">
+      <h1>All Aboard!</h1>
+    </div>
+  </div>
+  <!--Panel-->
+  <div class="row panel">
+    <div class="row">
+      <div id="ee-list" class="col-sm-12">
+        <h2>Current Train Schedule</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Train Name</th>
+              <th>Destination</th>
+              <th>Frequency (min)</th>
+              <th>Next Arrival</th>
+              <th>Minutes Away</th>
+              <!-- th>Total Billed</th> -->
+            </tr>
+          </thead>
+          <tbody id="tbody">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- SEARCH PARAMETERS SECTION -->
+  <div class="row panel">
+    <div class="row">
+      <div class="col-sm-12">
+        <h4>Add Train</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="form-group">
+          <label>Train Name:</label>
+          <input class="form-control" id="ee-trainName" type="text">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="form-group">
+          <label>Destination</label>
+          <input class="form-control" id="destination" type="text">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="form-group">
+          <label>First Train Time (HH:mm - military time)</label>
+          <input class="form-control" id="firstTrain" type="text">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="form-group">
+          <label>Frequency (min)</label>
+          <input class="form-control" id="frequency" type="text">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <input class="btn button button-info" type="submit" value="Submit" id="submit">
+      </div>
+    </div>
+  </div>
+  <script src="dataApp.js"></script>
+
+  <body>
+  </body>
+
+</html>
