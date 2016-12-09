@@ -19,7 +19,7 @@
   $("#submit").on("click", function() {
 
       // Grabbed values from text boxes
-      trainName = $("#ee-trainName").val().trim();
+      trainName = $("#trainName").val().trim();
       destination = $("#destination").val().trim();
       firstTrain = $("#firstTrain").val().trim();
       frequency = $("#frequency").val().trim();
@@ -61,12 +61,13 @@
   database.ref().on("value", function(snapshot) {
 
       // Log everything that's coming out of snapshot
-      console.log(snapshot.val());
+      // console.log(snapshot.val());
       console.log(snapshot.val().trainName);
       console.log(snapshot.val().destination);
       console.log(snapshot.val().firstTrain);
       console.log(snapshot.val().frequency);
-
+      console.log(moment(convertedDate).format("MMM DDD, YYYY hh:mm:ss"));
+      
       // Change the HTML to reflect
       // $("#trainName-display").html(snapshot.val().trainName);
       // $("#email-display").html(snapshot.val().destination);
