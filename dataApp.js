@@ -15,6 +15,9 @@
   var firstTrain = "";
   var frequency = "";
 
+  var randomTime = "";
+  var convertedTime = moment(new Date(randomTime));
+
   // Capture Button Click
   $("#submit").on("click", function() {
 
@@ -43,7 +46,7 @@
       console.log(childSnapshot.val().destination);
       console.log(childSnapshot.val().firstTrain);
       console.log(childSnapshot.val().frequency);
-
+      // console.log(moment("", "HH").format('hA'));
 
       // full list of items to the well
       $("#tbody").append("<tr><td> " + childSnapshot.val().trainName +
@@ -62,12 +65,12 @@
 
       // Log everything that's coming out of snapshot
       // console.log(snapshot.val());
-      console.log(snapshot.val().trainName);
-      console.log(snapshot.val().destination);
-      console.log(snapshot.val().firstTrain);
-      console.log(snapshot.val().frequency);
-      console.log(moment(convertedDate).format("MMM DDD, YYYY hh:mm:ss"));
-      
+      // console.log(snapshot.val().trainName);
+      // console.log(snapshot.val().destination);
+      // console.log(snapshot.val().firstTrain);
+      // console.log(snapshot.val().frequency);
+      // console.log(moment("24", "HH").format('hA'));
+
       // Change the HTML to reflect
       // $("#trainName-display").html(snapshot.val().trainName);
       // $("#email-display").html(snapshot.val().destination);
